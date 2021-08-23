@@ -1,0 +1,97 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% abnTeX2: Modelo de Trabalho Acadêmico em conformidade com 
+% as normas da ABNT
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[english, 
+               brazil, 
+               bsc]
+               {ftec-abntex2}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Área para adição de pacotes extras
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{lipsum} %Retirar para a versão final do documento
+
+%Utilize aqui seu pacote preferido para algoritmos
+\usepackage[linesnumbered]{algorithm2e}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Compila o indice
+\makeindex
+
+\begin{document}
+
+% Seleciona o idioma do documento (conforme pacotes do babel)
+\selectlanguage{brazil}
+
+% Retira espaço extra obsoleto entre as frases.
+\frenchspacing 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ELEMENTOS PRÉ-TEXTUAIS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pretextual
+
+\titulo{Título do Trabalho} 
+\autor{NOME DO ALUNO}
+\orientador{Prof. Titulação. Fulano de tal}
+\curso{Engenharia da Computação}
+
+\inserirInformacoesPDF
+
+\imprimircapa
+\imprimirfolhaderosto*
+
+\imprimirfolhadeaprovacao
+
+\include{Pre_Textual/Dedicatoria}
+\include{Pre_Textual/Agradecimentos}
+\include{Pre_Textual/Epigrafe}
+\include{Pre_Textual/Resumo}
+\include{Pre_Textual/Abstract}
+
+
+\mostrarlistadeILUSTRACOES
+%\mostrarlistadeQUADROS
+\mostrarlistadeTABELAS
+%\mostrarlistadeCODIGOS
+%\mostrarlistadeALGORITMOS
+ 
+\include{Pre_Textual/Abreviaturas}
+\include{Pre_Textual/Simbolos}
+    
+\mostrarSUMARIO
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ELEMENTOS TEXTUAIS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textual
+\include{Conteudo/01_Introducao}
+\include{Conteudo/02_Comandos}
+\include{Conteudo/03_ConteudoEspecifico}
+\include{Conteudo/04_Outros}
+\include{Conteudo/05_Conclusao}
+
+\phantompart
+\bibliography{Bibliografia}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ELEMENTOS PÓS-TEXTUAIS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\postextual
+
+%\renewcommand{\chapnumfont}{\chaptitlefont}
+%\renewcommand{\afterchapternum}{}
+%\include{Pos_Textual/Apendices}
+%\include{Pos_Textual/Anexos}
+
+\end{document}
